@@ -7,4 +7,5 @@ RUN apt-get install -q -y openjdk-7-jre-headless
 ADD http://mirrors.jenkins-ci.org/war/latest/jenkins.war /root/jenkins.war
 
 EXPOSE 8080
+VOLUME ["/var/lib/jenkins"]
 CMD ["java", "-jar", "/root/jenkins.war"]
